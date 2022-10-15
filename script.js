@@ -31,22 +31,25 @@ const showTypeOf = function (variable) {
 const getAllServicePrices = function () {
 
     let servicePrice = 0;
+    let sum = 0;
 
     for (let i = 0; i < 2; i++) {
 
         if (i === 0) {
             service1 = prompt('Какой дополнительный тип услуги нужен?');
-            servicePrice = +prompt('Сколько это будет стоить?');
         } else if (i === 1) {
             service2 = prompt('Какой дополнительный тип услуги нужен?');
-            servicePrice = +prompt('Сколько это будет стоить?');
         }
 
+        servicePrice = +prompt('Сколько это будет стоить?');
         while (!isNumber(servicePrice)) {
             servicePrice = +prompt('Сколько это будет стоить?');
         }
+
+        sum += servicePrice;
+
     }
-    return servicePrice + servicePrice;
+    return sum;
 };
 const getServicePercentPrices = function (variableone, variabletwo) {
     return variableone - Math.ceil((variableone * (variabletwo / 100)));
