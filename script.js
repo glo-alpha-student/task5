@@ -37,11 +37,11 @@ const getAllServicePrices = function () {
         if (i === 0) {
             service1 = prompt('Какой дополнительный тип услуги нужен?');
             servicePrice = +prompt('Сколько это будет стоить?');
-
         } else if (i === 1) {
             service2 = prompt('Какой дополнительный тип услуги нужен?');
             servicePrice = +prompt('Сколько это будет стоить?');
         }
+
         while (!isNumber(servicePrice)) {
             servicePrice = +prompt('Сколько это будет стоить?');
         }
